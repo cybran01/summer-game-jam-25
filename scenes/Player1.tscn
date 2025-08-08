@@ -1,3 +1,47 @@
-[gd_scene format=3 uid="uid://5o0ka2vrc1u"]
+[gd_scene load_steps=6 format=3 uid="uid://5o0ka2vrc1u"]
+
+[ext_resource type="Texture2D" uid="uid://c7trmu4qy1ehw" path="res://animations/attack.svg" id="2_omfct"]
+[ext_resource type="Texture2D" uid="uid://da4lf72r0k3kl" path="res://animations/feign.svg" id="3_aiyq1"]
+[ext_resource type="Texture2D" uid="uid://dx4p8gv3q5sj1" path="res://animations/idle.svg" id="4_51rl0"]
+[ext_resource type="Texture2D" uid="uid://bb7u637svhk8j" path="res://animations/parry.svg" id="5_obn67"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f84kq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_omfct")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_aiyq1")
+}],
+"loop": true,
+"name": &"feign",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_51rl0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_obn67")
+}],
+"loop": true,
+"name": &"parry",
+"speed": 5.0
+}]
 
 [node name="Player1" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f84kq")
+animation = &"idle"

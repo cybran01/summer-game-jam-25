@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Pool Noodle Sim"
+run/main_scene="uid://bk24bq40j08cy"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [rendering]
 
