@@ -28,6 +28,8 @@ func change_state_by_name(state_name: String) -> void:
 	change_state(next_state)
 
 func change_state(new_state: State) -> void:
+	if current_state != null:
+		current_state.exit()
 	current_state = new_state
 	current_state.enter()
 

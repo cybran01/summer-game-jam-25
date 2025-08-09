@@ -16,6 +16,9 @@ var parry_state: State = $'../parry'
 
 func enter() -> void:
 	anim_fin = false
+	
+func exit() -> void:
+	pass
 
 func update(delta: float) -> State:
 	return null
