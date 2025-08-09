@@ -25,6 +25,7 @@ position = Vector2(290, 7)
 
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_7g83o")
+autoplay = true
 
 [node name="HitSound_01" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_0uv0p")
