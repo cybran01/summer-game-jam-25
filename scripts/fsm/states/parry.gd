@@ -7,3 +7,7 @@ func enter() -> void:
 func update(delta: float) -> State:
 	# return to idle after parry time
 	return null
+
+func is_parrying() -> bool:
+	# add correct parry logic
+	return false

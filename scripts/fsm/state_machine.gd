@@ -25,3 +25,6 @@ func update(delta: float) -> void:
 	var new_state = current_state.update(delta)
 	if new_state:
 		change_state(new_state)
+
+func is_parrying() -> bool:
+	return current_state.is_parrying()

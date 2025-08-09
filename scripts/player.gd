@@ -12,3 +12,6 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	state_machine.update(delta)
+
+func is_parrying() -> bool:
+	return state_machine.is_parrying()
