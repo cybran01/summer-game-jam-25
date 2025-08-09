@@ -1,22 +1,3 @@
-
-
-## Soundeffect list
-
-- multiple wooden sword hit sounds
-- wooshing sound effects (using rope)
-- multiple hurt sound effects (eins mindestens ein "aua")
-- multiple attack screams (yoooooooo)
-- wind wooshing sound effects
-- sea ambient sound effects  
-	- seagulls
-	- waves
-	- jetski / motorboats
-	- background chatter (beach visitors, children)
- 
-## Required utensils
-- headset + microphone
-- thicker rope, towel (something to make woooooosh sound)
-- cutlery
-- wooden boards 
-
-- 
+version https://git-lfs.github.com/spec/v1
+oid sha256:27670950a87bb14fbcfd6b63917caaa68ad8c9ab6c3a07eeefd6a11591621373
+size 480
