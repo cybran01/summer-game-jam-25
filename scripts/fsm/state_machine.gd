@@ -16,11 +16,6 @@ func change_state(new_state: State) -> void:
 	current_state = new_state
 	current_state.enter()
 
-func handle_input(event: InputEvent) -> void:
-	var new_state = current_state.handle_input(event)
-	if new_state:
-		change_state(new_state)
-
 func update(delta: float) -> void:
 	var new_state = current_state.update(delta)
 	if new_state:

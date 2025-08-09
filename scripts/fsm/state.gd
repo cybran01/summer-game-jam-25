@@ -9,8 +9,5 @@ func enter() -> void:
 func update(delta: float) -> State:
 	return null
 
-func handle_input(event: InputEvent) -> State:
-	return null
-
 func is_parrying() -> bool:
 	return false

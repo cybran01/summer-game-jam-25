@@ -1,10 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://5o0ka2vrc1u"]
+[gd_scene load_steps=12 format=3 uid="uid://5o0ka2vrc1u"]
 
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_6062o"]
-[ext_resource type="Texture2D" uid="uid://c7trmu4qy1ehw" path="res://animations/attack.svg" id="2_omfct"]
-[ext_resource type="Texture2D" uid="uid://da4lf72r0k3kl" path="res://animations/feign.svg" id="3_aiyq1"]
-[ext_resource type="Texture2D" uid="uid://dx4p8gv3q5sj1" path="res://animations/idle.svg" id="4_51rl0"]
-[ext_resource type="Texture2D" uid="uid://bb7u637svhk8j" path="res://animations/parry.svg" id="5_obn67"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="6_3p2px"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="7_oac26"]
 [ext_resource type="Script" uid="uid://cgstr6ytpbfnw" path="res://scripts/fsm/states/death.gd" id="8_vy07h"]
@@ -19,7 +15,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_omfct")
+"texture": null
 }],
 "loop": true,
 "name": &"attack",
@@ -27,7 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_aiyq1")
+"texture": null
 }],
 "loop": true,
 "name": &"feign",
@@ -35,7 +31,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_51rl0")
+"texture": null
 }],
 "loop": true,
 "name": &"idle",
@@ -43,7 +39,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_obn67")
+"texture": null
 }],
 "loop": true,
 "name": &"parry",
@@ -75,6 +71,9 @@ script = ExtResource("10_g2667")
 
 [node name="idle" type="Node" parent="state_machine"]
 script = ExtResource("11_jfxrp")
+attack_name = "attack_player_1"
+feint_name = "feint_player_1"
+parry_name = "parry_player_1"
 
 [node name="parry" type="Node" parent="state_machine"]
 script = ExtResource("12_673bu")
