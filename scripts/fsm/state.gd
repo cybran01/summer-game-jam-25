@@ -16,7 +16,7 @@ var parry_state: State = $'../parry'
 
 func enter() -> void:
 	anim_fin = false
-	
+
 func exit() -> void:
 	pass
 
