@@ -14,6 +14,7 @@ func show_game_over():
 	$StartButton.show()
 
 func _on_start_button_pressed() -> void:
+	reset_scores()
 	$StartButton.hide()
 	show_message("ready")
 	$StartTimer.start()
@@ -25,3 +26,13 @@ func _on_start_timer_timeout() -> void:
 func _on_ready_timer_timeout() -> void:
 	$MainLabel.hide()
 	start_game.emit()
+	
+func update_player1_score(score):
+	$Player1Score.text = str(score)
+	
+func update_player2_score(score):
+	$Player2Score.text = str(score)
+
+func reset_scores():
+	$Player1Score.text = "0"
+	$Player2Score.text = "0"

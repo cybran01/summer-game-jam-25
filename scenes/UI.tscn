@@ -4,16 +4,20 @@
 
 [node name="UI" type="Control"]
 layout_mode = 3
-anchor_right = 2.222
-anchor_bottom = 2.222
-offset_right = -1407.74
-offset_bottom = -791.856
+anchor_left = -0.5
+anchor_top = -0.423
+anchor_right = 0.493
+anchor_bottom = 0.577
+offset_left = -0.00201416
+offset_top = 0.104004
+offset_right = 8.06586
+offset_bottom = 0.103912
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_ro3t7")
-metadata/_edit_group_ = true
 
 [node name="MainLabel" type="TextureRect" parent="."]
+light_mask = 0
 custom_minimum_size = Vector2(900, 450)
 layout_mode = 1
 anchors_preset = 8
@@ -29,14 +33,14 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 3
 
-[node name="Player1ScoreLabel" type="Label" parent="."]
+[node name="Player1Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 154.0
 offset_bottom = 55.0
 theme_override_font_sizes/font_size = 40
 text = "Player 1"
 
-[node name="Player2ScoreLabel" type="Label" parent="."]
+[node name="Player2Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -47,19 +51,37 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 40
 text = "Player 2"
 
+[node name="Player1Score" type="Label" parent="."]
+offset_left = 180.0
+offset_right = 220.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="Player2Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 950.0
+offset_right = -162.004
+offset_bottom = -593.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -104.002
-offset_top = -208.0
-offset_right = 121.998
-offset_bottom = -145.0
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -31.5
+offset_right = 113.0
+offset_bottom = 31.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
