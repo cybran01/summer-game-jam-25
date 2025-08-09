@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk24bq40j08cy"]
+[gd_scene load_steps=10 format=3 uid="uid://bk24bq40j08cy"]
 
 [ext_resource type="Script" uid="uid://dku4i66hcthlt" path="res://scripts/world.gd" id="1_7g83o"]
 [ext_resource type="PackedScene" uid="uid://5o0ka2vrc1u" path="res://scenes/Player1.tscn" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://bsl7yb7jvsnw" path="res://scenes/Player2.tscn" id="2_7g83o"]
 [ext_resource type="AudioStream" uid="uid://dyvurqmh26k16" path="res://soundeffects/battle_music.wav" id="3_7g83o"]
-[ext_resource type="AudioStream" uid="uid://bdp7cxnbhlyop" path="res://soundeffects/sword_woosh.wav" id="5_1lgw5"]
-[ext_resource type="AudioStream" uid="uid://ccpujvstvcfoa" path="res://soundeffects/player_hitsound_01.wav" id="6_0uv0p"]
-[ext_resource type="AudioStream" uid="uid://lct4a4yq1tg6" path="res://soundeffects/player_hitsound_02.wav" id="7_b3faq"]
-[ext_resource type="AudioStream" uid="uid://judvvyq7gycq" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
+[ext_resource type="PackedScene" uid="uid://biis8qsrgr7pu" path="res://scenes/UI.tscn" id="4_d1c63"]
+[ext_resource type="AudioStream" uid="uid://c325unjvb2ho7" path="res://soundeffects/sword_woosh.wav" id="5_1lgw5"]
+[ext_resource type="AudioStream" uid="uid://cwhcdch744250" path="res://soundeffects/player_hitsound_01.wav" id="6_0uv0p"]
+[ext_resource type="AudioStream" uid="uid://powiqo16xdk2" path="res://soundeffects/player_hitsound_02.wav" id="7_b3faq"]
+[ext_resource type="AudioStream" uid="uid://dpjbiga3sdh43" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_7g83o")
@@ -35,3 +36,8 @@ stream = ExtResource("7_b3faq")
 
 [node name="HitSound_03" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_b3faq")
+
+[node name="UI" parent="." instance=ExtResource("4_d1c63")]
+
+[connection signal="reset_game" from="UI" to="." method="_on_ui_reset_game"]
+[connection signal="start_game" from="UI" to="." method="_on_ui_start_game"]
