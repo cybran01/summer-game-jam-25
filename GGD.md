@@ -59,7 +59,7 @@ on whiff, 1300ms animation lock
 - Miss (Woosh sound)
 - BG music (tense aber lowkey damit nicht ablenkt) ✅
 - Vocals (Schreie, Stöhnen, Grunts)
-- Loose (Wasser platsch Geräusch)
+- Loose (Wasser platsch Geräusch) ✅
 - Ambient sounds (Seagulls, waves etc.)
 - Announcer
 	- Ready? Fight?
