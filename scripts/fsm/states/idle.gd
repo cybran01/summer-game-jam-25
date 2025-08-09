@@ -13,6 +13,8 @@ func enter() -> void:
 	print($'../..'.name + " " + self.name)
 
 func update(delta: float) -> State:
+	if GameStatus.started != true:
+		return null
 	if Input.is_action_pressed(attack_name):
 		return attack_state
 	elif Input.is_action_pressed(feint_name):

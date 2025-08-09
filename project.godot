@@ -15,6 +15,10 @@ run/main_scene="uid://bk24bq40j08cy"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameStatus="*res://scripts/game_status.gd"
+
 [input]
 
 attack_player_1={
