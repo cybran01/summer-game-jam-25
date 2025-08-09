@@ -6,8 +6,8 @@
 layout_mode = 3
 anchor_right = 2.222
 anchor_bottom = 2.222
-offset_right = 0.255859
-offset_bottom = 0.143921
+offset_right = -1407.74
+offset_bottom = -791.856
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_ro3t7")
