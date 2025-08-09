@@ -144,6 +144,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2667")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2667")
 }],
 "loop": false,
 "name": &"fail",
@@ -218,7 +221,7 @@ script = ExtResource("1_6062o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f84kq")
-animation = &"idle"
+animation = &"death"
 script = ExtResource("3_ua8fg")
 
 [node name="WooshSound" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
@@ -264,6 +267,7 @@ script = ExtResource("13_4p6fq")
 [node name="victory" type="Node" parent="state_machine"]
 script = ExtResource("14_gimd8")
 
+[connection signal="animation_changed" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="state_machine" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_frame_changed"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="state_machine/attack" method="_on_animated_sprite_2d_frame_changed"]
