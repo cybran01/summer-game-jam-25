@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bsl7yb7jvsnw" path="res://scenes/Player2.tscn" id="2_7g83o"]
 [ext_resource type="AudioStream" uid="uid://dyvurqmh26k16" path="res://soundeffects/battle_music.wav" id="3_7g83o"]
 [ext_resource type="PackedScene" uid="uid://biis8qsrgr7pu" path="res://scenes/UI.tscn" id="4_d1c63"]
-[ext_resource type="AudioStream" uid="uid://c325unjvb2ho7" path="res://soundeffects/sword_woosh.wav" id="5_1lgw5"]
-[ext_resource type="AudioStream" uid="uid://cwhcdch744250" path="res://soundeffects/player_hitsound_01.wav" id="6_0uv0p"]
-[ext_resource type="AudioStream" uid="uid://powiqo16xdk2" path="res://soundeffects/player_hitsound_02.wav" id="7_b3faq"]
-[ext_resource type="AudioStream" uid="uid://dpjbiga3sdh43" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
+[ext_resource type="AudioStream" uid="uid://dnbcp22mie4bn" path="res://soundeffects/sword_woosh.wav" id="5_1lgw5"]
+[ext_resource type="AudioStream" uid="uid://yfq8sd7ksubc" path="res://soundeffects/player_hitsound_01.wav" id="6_0uv0p"]
+[ext_resource type="AudioStream" uid="uid://cpvf25kxlmhgs" path="res://soundeffects/player_hitsound_02.wav" id="7_b3faq"]
+[ext_resource type="AudioStream" uid="uid://bl40o2eay6uew" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_7g83o")
