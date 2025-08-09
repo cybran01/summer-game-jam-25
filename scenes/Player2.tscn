@@ -213,7 +213,7 @@ script = ExtResource("1_21jxl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_21jxl")
-animation = &"attack"
+animation = &"idle"
 flip_h = true
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]

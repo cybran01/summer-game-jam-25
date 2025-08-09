@@ -3,7 +3,7 @@ extends State
 func enter() -> void:
 	super()
 	player.anim_sprite.play("feint")
-	print("player1 feint")
+	print($'../..'.name + " " + self.name)
 
 func update(delta: float) -> State:
 	if anim_fin:

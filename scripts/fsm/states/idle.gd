@@ -10,7 +10,7 @@ var parry_name: String
 func enter() -> void:
 	super()
 	player.anim_sprite.play("idle")
-	print("player1 idle")
+	print($'../..'.name + " " + self.name)
 
 func update(delta: float) -> State:
 	if Input.is_action_pressed(attack_name):

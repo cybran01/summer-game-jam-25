@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://5o0ka2vrc1u" path="res://scenes/Player1.tscn" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://bsl7yb7jvsnw" path="res://scenes/Player2.tscn" id="2_7g83o"]
-[ext_resource type="AudioStream" uid="uid://c62jlvgltdy36" path="res://soundeffects/battle_music.wav" id="3_7g83o"]
+[ext_resource type="AudioStream" uid="uid://dyvurqmh26k16" path="res://soundeffects/battle_music.wav" id="3_7g83o"]
 
 [node name="World" type="Node2D"]
 
