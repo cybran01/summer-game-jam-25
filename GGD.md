@@ -60,7 +60,7 @@ on whiff, 1300ms animation lock
 - BG music (tense aber lowkey damit nicht ablenkt) ✅
 - Vocals (Schreie, Stöhnen, Grunts)
 - Loose (Wasser platsch Geräusch) ✅
-- Ambient sounds (Seagulls, waves etc.)
+- Ambient sounds (Seagulls, waves etc.) ✅
 - Announcer
 	- Ready? Fight?
 	- next round
