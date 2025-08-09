@@ -1,5 +1,8 @@
 extends State
 
+@export
+var is_in_parry_window: bool = false
+
 func enter() -> void:
 	super()
 	player.anim_sprite.play("parry")
@@ -12,4 +15,4 @@ func update(delta: float) -> State:
 
 func is_parrying() -> bool:
 	# add correct parry logic
-	return false
+	return is_in_parry_window

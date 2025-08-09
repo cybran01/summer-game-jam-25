@@ -6,6 +6,11 @@ func _on_frame_changed() -> void:
 			match frame:
 				2:
 					$WooshSound.play()
+		'parry':
+			match frame:
+				var x when x > 2:
+					print($'..'.name, " in parry animation aframe ", frame)
+					$'../state_machine/parry'.is_in_parry_window = false
 
 func _on_animation_changed() -> void:
 	match animation:
@@ -19,3 +24,5 @@ func _on_animation_changed() -> void:
 					$HitSound_02.play()
 				2:
 					$HitSound_03.play()
+		'parry':
+			$'../state_machine/parry'.is_in_parry_window = true
