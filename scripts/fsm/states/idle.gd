@@ -10,11 +10,11 @@ var parry_name: String
 @onready
 var _animatedSprite = get_node("../../AnimatedSprite2D")
 @onready
-var attack_state: State = $attack
+var attack_state: State = $'../attack'
 @onready
-var feint_state: State = $feint
+var feint_state: State = $'../feint'
 @onready
-var parry_state: State = $parry
+var parry_state: State = $'../parry'
 
 func enter() -> void:
 	_animatedSprite.play("idle")
