@@ -1,9 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://5o0ka2vrc1u"]
+[gd_scene load_steps=16 format=3 uid="uid://5o0ka2vrc1u"]
 
+[ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_6062o"]
 [ext_resource type="Texture2D" uid="uid://c7trmu4qy1ehw" path="res://animations/attack.svg" id="2_omfct"]
 [ext_resource type="Texture2D" uid="uid://da4lf72r0k3kl" path="res://animations/feign.svg" id="3_aiyq1"]
 [ext_resource type="Texture2D" uid="uid://dx4p8gv3q5sj1" path="res://animations/idle.svg" id="4_51rl0"]
 [ext_resource type="Texture2D" uid="uid://bb7u637svhk8j" path="res://animations/parry.svg" id="5_obn67"]
+[ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="6_3p2px"]
+[ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="7_oac26"]
+[ext_resource type="Script" uid="uid://cgstr6ytpbfnw" path="res://scripts/fsm/states/death.gd" id="8_vy07h"]
+[ext_resource type="Script" uid="uid://dvqjs37qap8cd" path="res://scripts/fsm/states/fail.gd" id="9_rgxth"]
+[ext_resource type="Script" uid="uid://l2177al2td5i" path="res://scripts/fsm/states/feint.gd" id="10_g2667"]
+[ext_resource type="Script" uid="uid://deamystrrxll1" path="res://scripts/fsm/states/idle.gd" id="11_jfxrp"]
+[ext_resource type="Script" uid="uid://vwqpekh11yll" path="res://scripts/fsm/states/parry.gd" id="12_673bu"]
+[ext_resource type="Script" uid="uid://re3aeu1hvoie" path="res://scripts/fsm/states/success.gd" id="13_4p6fq"]
+[ext_resource type="Script" uid="uid://7i0d4y0be7x6" path="res://scripts/fsm/states/victory.gd" id="14_gimd8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f84kq"]
 animations = [{
@@ -41,7 +51,35 @@ animations = [{
 }]
 
 [node name="Player1" type="Node2D"]
+script = ExtResource("1_6062o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f84kq")
 animation = &"idle"
+
+[node name="state_machine" type="Node" parent="."]
+script = ExtResource("6_3p2px")
+
+[node name="attack" type="Node" parent="state_machine"]
+script = ExtResource("7_oac26")
+
+[node name="death" type="Node" parent="state_machine"]
+script = ExtResource("8_vy07h")
+
+[node name="fail" type="Node" parent="state_machine"]
+script = ExtResource("9_rgxth")
+
+[node name="feint" type="Node" parent="state_machine"]
+script = ExtResource("10_g2667")
+
+[node name="idle" type="Node" parent="state_machine"]
+script = ExtResource("11_jfxrp")
+
+[node name="parry" type="Node" parent="state_machine"]
+script = ExtResource("12_673bu")
+
+[node name="success" type="Node" parent="state_machine"]
+script = ExtResource("13_4p6fq")
+
+[node name="victory" type="Node" parent="state_machine"]
+script = ExtResource("14_gimd8")
