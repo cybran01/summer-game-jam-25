@@ -7,17 +7,9 @@ var feint_name: String
 @export
 var parry_name: String
 
-@onready
-var _animatedSprite = get_node("../../AnimatedSprite2D")
-@onready
-var attack_state: State = $'../attack'
-@onready
-var feint_state: State = $'../feint'
-@onready
-var parry_state: State = $'../parry'
-
 func enter() -> void:
-	_animatedSprite.play("idle")
+	super()
+	player.anim_sprite.play("idle")
 	print("player1 idle")
 
 func update(delta: float) -> State:

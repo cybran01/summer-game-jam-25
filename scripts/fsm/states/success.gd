@@ -1,9 +1,9 @@
 extends State
 
 func enter() -> void:
-	# play success animation
-	pass
+	super()
 
 func update(delta: float) -> State:
-	# return to idle after success timout
+	if anim_fin:
+		return idle_state
 	return null

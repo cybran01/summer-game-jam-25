@@ -1,14 +1,13 @@
 extends State
 
-@onready
-var _animatedSprite = get_node("../../AnimatedSprite2D")
-
 func enter() -> void:
-	_animatedSprite.play("parry")
+	super()
+	player.anim_sprite.play("parry")
 	print("player1 parry")
 
 func update(delta: float) -> State:
-	# return to idle after parry time
+	if anim_fin:
+		return idle_state
 	return null
 
 func is_parrying() -> bool:

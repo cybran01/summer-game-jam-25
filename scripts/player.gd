@@ -4,6 +4,9 @@ extends Node2D
 @onready
 var state_machine: StateMachine = $state_machine
 
+@onready
+var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 func _ready() -> void:
 	state_machine.init(self)
 

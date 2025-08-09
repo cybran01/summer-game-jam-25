@@ -3,8 +3,19 @@ extends Node
 
 var player: Player
 
+var anim_fin: bool
+
+@onready
+var idle_state: State = $'../idle'
+@onready
+var attack_state: State = $'../attack'
+@onready
+var feint_state: State = $'../feint'
+@onready
+var parry_state: State = $'../parry'
+
 func enter() -> void:
-	pass
+	anim_fin = false
 
 func update(delta: float) -> State:
 	return null

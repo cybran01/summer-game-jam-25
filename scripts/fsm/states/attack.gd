@@ -1,10 +1,8 @@
 extends State
 
-@onready
-var _animatedSprite = get_node("../../AnimatedSprite2D")
-
 func enter() -> void:
-	_animatedSprite.play("attack")
+	super()
+	player.anim_sprite.play("attack")
 	print("player1 attack")
 
 func update(delta: float) -> State:

@@ -105,7 +105,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vy07h")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -116,7 +116,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2667")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -124,7 +124,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cm0sd")
 }],
-"loop": true,
+"loop": false,
 "name": &"fail",
 "speed": 5.0
 }, {
@@ -150,7 +150,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cx12g")
 }],
-"loop": true,
+"loop": false,
 "name": &"feint",
 "speed": 5.0
 }, {
@@ -169,7 +169,7 @@ animations = [{
 "duration": 1.0,
 "texture": null
 }],
-"loop": true,
+"loop": false,
 "name": &"parry",
 "speed": 5.0
 }]
@@ -179,7 +179,7 @@ script = ExtResource("1_6062o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f84kq")
-animation = &"fail"
+animation = &"idle"
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("6_3p2px")
@@ -211,3 +211,5 @@ script = ExtResource("13_4p6fq")
 
 [node name="victory" type="Node" parent="state_machine"]
 script = ExtResource("14_gimd8")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="state_machine" method="_on_animated_sprite_2d_animation_finished"]
