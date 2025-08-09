@@ -60,7 +60,7 @@ func attack_p1() -> void:
 func attack_p2() -> void:
 	if player1.is_parrying():
 		handle_score(player1, player2)
-		$UI.update_player1_score(player2.score)
+		$UI.update_player1_score(player1.score)
 	else:
 		handle_score(player2, player1)
 		$UI.update_player2_score(player2.score)
