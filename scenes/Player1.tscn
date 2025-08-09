@@ -57,8 +57,9 @@ script = ExtResource("1_6062o")
 sprite_frames = SubResource("SpriteFrames_f84kq")
 animation = &"idle"
 
-[node name="state_machine" type="Node" parent="."]
+[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("6_3p2px")
+starting_state = NodePath("idle")
 
 [node name="attack" type="Node" parent="state_machine"]
 script = ExtResource("7_oac26")

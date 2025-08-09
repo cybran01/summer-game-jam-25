@@ -3,6 +3,7 @@ extends Node
 
 @export
 var starting_state: State
+
 var current_state: State
 
 func init(player: Player) -> void:
