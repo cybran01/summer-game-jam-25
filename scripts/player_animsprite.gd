@@ -1,11 +1,14 @@
 extends AnimatedSprite2D
 
+signal play_hit
+signal play_sword_woosh
+
 func _on_frame_changed() -> void:
 	match animation:
 		'attack':
 			match frame:
 				2:
-					$WooshSound.play()
+					play_sword_woosh.emit()
 		'parry':
 			match frame:
 				var x when x > 2:
@@ -15,14 +18,6 @@ func _on_frame_changed() -> void:
 func _on_animation_changed() -> void:
 	match animation:
 		'fail', 'death':
-			var number = RandomNumberGenerator.new().randi_range(0, 2)
-			print('playing sound ' + str(number))
-			match number:
-				0:
-					$HitSound_01.play()
-				1:
-					$HitSound_02.play()
-				2:
-					$HitSound_03.play()
+			play_hit.emit()
 		'parry':
 			$'../state_machine/parry'.is_in_parry_window = true

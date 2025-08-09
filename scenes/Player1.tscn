@@ -1,19 +1,15 @@
-[gd_scene load_steps=40 format=3 uid="uid://5o0ka2vrc1u"]
+[gd_scene load_steps=36 format=3 uid="uid://5o0ka2vrc1u"]
 
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_6062o"]
-[ext_resource type="Texture2D" uid="uid://ctbkdrmn55sbk" path="res://animations/anim_Spritesheet.png" id="2_6lsxu"]
+[ext_resource type="Texture2D" uid="uid://c6uvxv0bcd6jj" path="res://animations/anim_Spritesheet.png" id="2_6lsxu"]
 [ext_resource type="Script" uid="uid://boilyalvtioas" path="res://scripts/player_animsprite.gd" id="3_ua8fg"]
-[ext_resource type="AudioStream" uid="uid://crj1fgnjos5f0" path="res://soundeffects/player_hitsound_01.wav" id="5_oac26"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="6_3p2px"]
-[ext_resource type="AudioStream" uid="uid://dx03y44v6f7lu" path="res://soundeffects/player_hitsound_02.wav" id="6_vy07h"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="7_oac26"]
-[ext_resource type="AudioStream" uid="uid://xg7w74uart5a" path="res://soundeffects/player_hitsound_03.wav" id="7_rgxth"]
 [ext_resource type="Script" uid="uid://cgstr6ytpbfnw" path="res://scripts/fsm/states/death.gd" id="8_vy07h"]
 [ext_resource type="Script" uid="uid://dvqjs37qap8cd" path="res://scripts/fsm/states/fail.gd" id="9_rgxth"]
 [ext_resource type="Script" uid="uid://l2177al2td5i" path="res://scripts/fsm/states/feint.gd" id="10_g2667"]
 [ext_resource type="Script" uid="uid://deamystrrxll1" path="res://scripts/fsm/states/idle.gd" id="11_jfxrp"]
 [ext_resource type="Script" uid="uid://vwqpekh11yll" path="res://scripts/fsm/states/parry.gd" id="12_673bu"]
-[ext_resource type="AudioStream" uid="uid://dhfmaylyibas6" path="res://soundeffects/sword_woosh.wav" id="12_pmppu"]
 [ext_resource type="Script" uid="uid://re3aeu1hvoie" path="res://scripts/fsm/states/success.gd" id="13_4p6fq"]
 [ext_resource type="Script" uid="uid://7i0d4y0be7x6" path="res://scripts/fsm/states/victory.gd" id="14_gimd8"]
 
@@ -223,18 +219,6 @@ script = ExtResource("1_6062o")
 sprite_frames = SubResource("SpriteFrames_f84kq")
 animation = &"death"
 script = ExtResource("3_ua8fg")
-
-[node name="WooshSound" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
-stream = ExtResource("12_pmppu")
-
-[node name="HitSound_01" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
-stream = ExtResource("5_oac26")
-
-[node name="HitSound_02" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
-stream = ExtResource("6_vy07h")
-
-[node name="HitSound_03" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
-stream = ExtResource("7_rgxth")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("6_3p2px")
