@@ -217,7 +217,7 @@ script = ExtResource("1_6062o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_f84kq")
-animation = &"death"
+animation = &"fail"
 script = ExtResource("3_ua8fg")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]

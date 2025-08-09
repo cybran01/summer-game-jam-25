@@ -8,15 +8,23 @@ var player2: Player = $Player2
 func _ready() -> void:
 	player1.attacked.connect(attack_p1)
 	player2.attacked.connect(attack_p2)
+	
 	player1.anim_sprite.play_sword_woosh.connect(play_swoosh)
 	player1.anim_sprite.play_hit.connect(play_hit)
+	player2.anim_sprite.play_sword_woosh.connect(play_swoosh)
+	player2.anim_sprite.play_hit.connect(play_hit)
 
 func play_swoosh():
-	$WooshSound.play()
+	$SwordSound.play()
 
 func play_hit():
 		var number = RandomNumberGenerator.new().randi_range(0, 2)
+		
 		print('playing sound ' + str(number))
+		
+		await get_tree().create_timer(0.2).timeout
+			
+		$BonkSound.play()
 			
 		match number:
 			0:
