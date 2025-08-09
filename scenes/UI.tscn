@@ -1,12 +1,17 @@
-[gd_scene load_steps=0 format=3 uid="uid://canoe8ey15xwu"]
+[gd_scene load_steps=2 format=3 uid="uid://biis8qsrgr7pu"]
+
+[ext_resource type="Script" uid="uid://cdfi4k6s21ojg" path="res://scripts/ui.gd" id="2_ro3t7"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 2.222
+anchor_bottom = 2.222
+offset_right = 0.255859
+offset_bottom = 0.143921
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_ro3t7")
+metadata/_edit_group_ = true
 
 [node name="MainLabel" type="Label" parent="."]
 layout_mode = 1
@@ -26,8 +31,8 @@ text = "Swim Noodle Sim"
 
 [node name="Player1ScoreLabel" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 154.0
+offset_bottom = 55.0
 theme_override_font_sizes/font_size = 40
 text = "Player 1"
 
@@ -42,7 +47,7 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 40
 text = "Player 1"
 
-[node name="Button" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -57,3 +62,10 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
