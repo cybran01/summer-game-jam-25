@@ -65,7 +65,7 @@ on whiff, 1300ms animation lock
 	- Ready? Fight?
 	- next round
 	- Player X, wins!
-- menu click / confirm sfx
+- menu click / confirm sfx ✅
 - win music jingle*
 - title screen soundtrack*
 
