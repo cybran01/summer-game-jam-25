@@ -12,7 +12,7 @@ func init(player: Player) -> void:
 			child.player = player
 	change_state(starting_state)
 
-func chage_state_by_name(state_name: String) -> void:
+func change_state_by_name(state_name: String) -> void:
 	var next_state: State
 	match state_name:
 		"fail":

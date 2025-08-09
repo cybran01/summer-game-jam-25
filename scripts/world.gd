@@ -12,11 +12,11 @@ func _ready() -> void:
 func handle_score(success_player: Player, fail_player: Player):
 	success_player.score += 1
 	if success_player.score >= 3:
-		success_player.state_machine.chage_state_by_name("victory")
-		fail_player.state_machine.chage_state_by_name("death")
+		success_player.state_machine.change_state_by_name("victory")
+		fail_player.state_machine.change_state_by_name("death")
 	else:
-		success_player.state_machine.chage_state_by_name("success")
-		fail_player.state_machine.chage_state_by_name("fail")
+		success_player.state_machine.change_state_by_name("success")
+		fail_player.state_machine.change_state_by_name("fail")
 
 func attack_p1() -> void:
 	if player2.is_parrying():
