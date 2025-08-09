@@ -30,3 +30,4 @@ mono_crash.*.json
 
 # Ignore .import files
 *.import
+*.tmp
