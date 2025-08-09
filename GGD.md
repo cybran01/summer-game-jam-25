@@ -55,8 +55,8 @@ on whiff, 1300ms animation lock
 
 **Audio**
 - Parry (Holzschwert clash)
-- Hit (Bonk sound)
-- Miss (Woosh sound)
+- Hit (Bonk sound) 
+- Miss (Woosh sound) ✅
 - BG music (tense aber lowkey damit nicht ablenkt) ✅
 - Vocals (Schreie, Stöhnen, Grunts)
 - Loose (Wasser platsch Geräusch) ✅
