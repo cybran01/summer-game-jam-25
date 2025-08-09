@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://biis8qsrgr7pu"]
 
-[ext_resource type="Script" uid="uid://cdfi4k6s21ojg" path="res://scripts/ui.gd" id="2_ro3t7"]
+[ext_resource type="Script" uid="uid://c4msocrruk45j" path="res://scripts/ui.gd" id="2_ro3t7"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -13,21 +13,21 @@ grow_vertical = 2
 script = ExtResource("2_ro3t7")
 metadata/_edit_group_ = true
 
-[node name="MainLabel" type="Label" parent="."]
+[node name="MainLabel" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(900, 450)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -152.0
-offset_top = -84.0
-offset_right = 143.0
-offset_bottom = -1.0
+offset_left = -450.0
+offset_top = -225.0
+offset_right = 450.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 60
-text = "Swim Noodle Sim"
+expand_mode = 3
 
 [node name="Player1ScoreLabel" type="Label" parent="."]
 layout_mode = 0
@@ -45,7 +45,7 @@ offset_left = -154.0
 offset_bottom = 55.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 40
-text = "Player 1"
+text = "Player 2"
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 1
@@ -54,18 +54,21 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -304.0
-offset_right = 114.0
-offset_bottom = -241.0
+offset_left = -104.002
+offset_top = -208.0
+offset_right = 121.998
+offset_bottom = -145.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
-[node name="MessageTimer" type="Timer" parent="."]
+[node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
+[node name="ReadyTimer" type="Timer" parent="."]
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="ReadyTimer" to="." method="_on_ready_timer_timeout"]
