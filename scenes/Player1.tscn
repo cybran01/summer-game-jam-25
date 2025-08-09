@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://5o0ka2vrc1u"]
 
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_6062o"]
-[ext_resource type="Texture2D" uid="uid://bp6m2rpaq2nrf" path="res://animations/anim_Spritesheet.png" id="2_6lsxu"]
+[ext_resource type="Texture2D" uid="uid://bp3upp6crvmaw" path="res://animations/anim_Spritesheet.png" id="2_6lsxu"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="6_3p2px"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="7_oac26"]
 [ext_resource type="Script" uid="uid://cgstr6ytpbfnw" path="res://scripts/fsm/states/death.gd" id="8_vy07h"]
