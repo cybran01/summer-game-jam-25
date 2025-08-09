@@ -7,4 +7,5 @@ func enter() -> void:
 
 func update(delta: float) -> State:
 	# calcualte windup, send attack signal
+	player.attacked.emit()
 	return null
