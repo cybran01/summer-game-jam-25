@@ -1,24 +1,3 @@
-[remap]
-
-importer="wav"
-type="AudioStreamWAV"
-uid="uid://dprreykpmc8bh"
-path="res://.godot/imported/hit.wav-590ddd21f77274234cdc0a3f95cbea84.sample"
-
-[deps]
-
-source_file="res://soundeffects/hit.wav"
-dest_files=["res://.godot/imported/hit.wav-590ddd21f77274234cdc0a3f95cbea84.sample"]
-
-[params]
-
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
-compress/mode=2
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d881c6e70ceecb9541ce5be4cdb8cabecc9dc389f0e7e42dc33e072a9ff25bc
+size 480

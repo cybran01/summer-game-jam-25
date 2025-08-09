@@ -1,24 +1,3 @@
-[remap]
-
-importer="wav"
-type="AudioStreamWAV"
-uid="uid://ddxicoed1jblq"
-path="res://.godot/imported/toilet_short.wav-21a355cbdd1170c6565bcbedf6967c0a.sample"
-
-[deps]
-
-source_file="res://soundeffects/toilet_short.wav"
-dest_files=["res://.godot/imported/toilet_short.wav-21a355cbdd1170c6565bcbedf6967c0a.sample"]
-
-[params]
-
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
-compress/mode=2
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9df4a2062c0e4c2ceb06527e4a9cfa2b9d24e0a264de4e904b7b23781d7f74e
+size 507
