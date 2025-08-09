@@ -17,6 +17,5 @@ position = Vector2(615, 0)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(290, 7)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_7g83o")
-autoplay = true
