@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameStatus="*res://scripts/game_status.gd"
 
+[display]
+
+window/size/mode=3
+
 [input]
 
 attack_player_1={
