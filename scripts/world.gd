@@ -38,33 +38,32 @@ func reset_game():
 	player1._ready()
 	player2._ready()
 
-func handle_score(success_player: Player, fail_player: Player):
-	print(GameStatus.started)
+func handle_score(success_player: Player, fail_player: Player, winner_idx: int):
 	success_player.score += 1
 	if success_player.score >= 3:
 		success_player.state_machine.change_state_by_name("victory")
 		fail_player.state_machine.change_state_by_name("death")
 		if GameStatus.started:
 			GameStatus.stop_game()
-			$UI.show_game_over()
+			$UI.show_game_over(winner_idx)
 	else:
 		success_player.state_machine.change_state_by_name("success")
 		fail_player.state_machine.change_state_by_name("fail")
 
 func attack_p1() -> void:
 	if player2.is_parrying():
-		handle_score(player2, player1)
+		handle_score(player2, player1, 2)
 		$UI.update_player2_score(player2.score)
 	else:
-		handle_score(player1, player2)
+		handle_score(player1, player2, 1)
 		$UI.update_player1_score(player1.score)
 
 func attack_p2() -> void:
 	if player1.is_parrying():
-		handle_score(player1, player2)
+		handle_score(player1, player2, 1)
 		$UI.update_player1_score(player1.score)
 	else:
-		handle_score(player2, player1)
+		handle_score(player2, player1, 2)
 		$UI.update_player2_score(player2.score)
 
 func _on_ui_start_game() -> void:
