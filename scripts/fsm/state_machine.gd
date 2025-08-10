@@ -23,6 +23,14 @@ func change_state_by_name(state_name: String) -> void:
 			next_state = $death
 		"victory": 
 			next_state = $victory
+		"fail_parry":
+			next_state = $fail_parry
+		"success_parry":
+			next_state = $success_parry
+		"death_parry":
+			next_state = $death_parry
+		"victory_parry": 
+			next_state = $victory_parry
 		_:
 			next_state = null
 	change_state(next_state)

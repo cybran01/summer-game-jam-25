@@ -20,7 +20,7 @@ func update(delta: float) -> State:
 
 func parry_over() -> void:
 	if player.anim_sprite.animation == 'parry':
-		if player.anim_sprite.frame == 2:
+		if player.anim_sprite.frame >= 1:
 			is_in_parry_window = false
 
 func is_parrying() -> bool:

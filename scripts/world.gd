@@ -4,6 +4,8 @@ extends Node2D
 var player1: Player = $Player1
 @onready
 var player2: Player = $Player2
+@onready
+var ui = $UI
 
 func _ready() -> void:
 	player1.attacked.connect(attack_p1)
@@ -38,33 +40,36 @@ func reset_game():
 	player1._ready()
 	player2._ready()
 
-func handle_score(success_player: Player, fail_player: Player, winner_idx: int):
+func handle_score(success_player: Player, fail_player: Player, parry: bool):
+	var state_suffix: String = ""
+	if parry:
+		state_suffix = "_parry"
 	success_player.score += 1
 	if success_player.score >= 3:
-		success_player.state_machine.change_state_by_name("victory")
-		fail_player.state_machine.change_state_by_name("death")
+		success_player.state_machine.change_state_by_name("victory"+state_suffix)
+		fail_player.state_machine.change_state_by_name("death"+state_suffix)
 		if GameStatus.started:
 			GameStatus.stop_game()
-			$UI.show_game_over(winner_idx)
+			ui.show_game_over(success_player.name.to_lower())
 	else:
-		success_player.state_machine.change_state_by_name("success")
-		fail_player.state_machine.change_state_by_name("fail")
+		success_player.state_machine.change_state_by_name("success"+state_suffix)
+		fail_player.state_machine.change_state_by_name("fail"+state_suffix)
 
 func attack_p1() -> void:
 	if player2.is_parrying():
-		handle_score(player2, player1, 2)
-		$UI.update_player2_score(player2.score)
+		handle_score(player2, player1, true)
+		ui.update_player2_score(player2.score)
 	else:
-		handle_score(player1, player2, 1)
-		$UI.update_player1_score(player1.score)
+		handle_score(player1, player2, false)
+		ui.update_player1_score(player1.score)
 
 func attack_p2() -> void:
 	if player1.is_parrying():
-		handle_score(player1, player2, 1)
-		$UI.update_player1_score(player1.score)
+		handle_score(player1, player2, true)
+		ui.update_player1_score(player1.score)
 	else:
-		handle_score(player2, player1, 2)
-		$UI.update_player2_score(player2.score)
+		handle_score(player2, player1, false)
+		ui.update_player2_score(player2.score)
 
 func _on_ui_start_game() -> void:
 	GameStatus.start_game()

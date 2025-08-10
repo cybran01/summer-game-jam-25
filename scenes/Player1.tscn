@@ -1,7 +1,7 @@
-[gd_scene load_steps=36 format=3 uid="uid://5o0ka2vrc1u"]
+[gd_scene load_steps=40 format=3 uid="uid://5o0ka2vrc1u"]
 
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_6062o"]
-[ext_resource type="Texture2D" uid="uid://qokia275tp7k" path="res://animations/anim_Spritesheet.png" id="2_6lsxu"]
+[ext_resource type="Texture2D" uid="uid://mx4ronod8n0k" path="res://animations/anim_Spritesheet.png" id="2_6lsxu"]
 [ext_resource type="Script" uid="uid://boilyalvtioas" path="res://scripts/player_animsprite.gd" id="3_ua8fg"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="6_3p2px"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="7_oac26"]
@@ -11,7 +11,11 @@
 [ext_resource type="Script" uid="uid://deamystrrxll1" path="res://scripts/fsm/states/idle.gd" id="11_jfxrp"]
 [ext_resource type="Script" uid="uid://vwqpekh11yll" path="res://scripts/fsm/states/parry.gd" id="12_673bu"]
 [ext_resource type="Script" uid="uid://re3aeu1hvoie" path="res://scripts/fsm/states/success.gd" id="13_4p6fq"]
+[ext_resource type="Script" uid="uid://35ekas4eluuw" path="res://scripts/fsm/states/death_parry.gd" id="13_oac26"]
 [ext_resource type="Script" uid="uid://7i0d4y0be7x6" path="res://scripts/fsm/states/victory.gd" id="14_gimd8"]
+[ext_resource type="Script" uid="uid://1nd8odk2sdau" path="res://scripts/fsm/states/fail_parry.gd" id="14_vy07h"]
+[ext_resource type="Script" uid="uid://bvydpu5q3jjam" path="res://scripts/fsm/states/success_parry.gd" id="15_rgxth"]
+[ext_resource type="Script" uid="uid://ckr1j86rcn3ns" path="res://scripts/fsm/states/victory_parry.gd" id="16_g2667"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lsxu"]
 atlas = ExtResource("2_6lsxu")
@@ -250,6 +254,18 @@ script = ExtResource("13_4p6fq")
 
 [node name="victory" type="Node" parent="state_machine"]
 script = ExtResource("14_gimd8")
+
+[node name="death_parry" type="Node" parent="state_machine"]
+script = ExtResource("13_oac26")
+
+[node name="fail_parry" type="Node" parent="state_machine"]
+script = ExtResource("14_vy07h")
+
+[node name="success_parry" type="Node" parent="state_machine"]
+script = ExtResource("15_rgxth")
+
+[node name="victory_parry" type="Node" parent="state_machine"]
+script = ExtResource("16_g2667")
 
 [connection signal="animation_changed" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="state_machine" method="_on_animated_sprite_2d_animation_finished"]

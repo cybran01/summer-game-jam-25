@@ -1,6 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://bsl7yb7jvsnw"]
+[gd_scene load_steps=40 format=3 uid="uid://bsl7yb7jvsnw"]
 
-[ext_resource type="Texture2D" uid="uid://c6uvxv0bcd6jj" path="res://animations/anim_Spritesheet.png" id="1_6rnxb"]
+[ext_resource type="Texture2D" uid="uid://mx4ronod8n0k" path="res://animations/anim_Spritesheet.png" id="1_6rnxb"]
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_21jxl"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="1_a1ruj"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="2_6rnxb"]
@@ -12,6 +12,10 @@
 [ext_resource type="Script" uid="uid://vwqpekh11yll" path="res://scripts/fsm/states/parry.gd" id="7_eajky"]
 [ext_resource type="Script" uid="uid://re3aeu1hvoie" path="res://scripts/fsm/states/success.gd" id="8_d2smn"]
 [ext_resource type="Script" uid="uid://7i0d4y0be7x6" path="res://scripts/fsm/states/victory.gd" id="9_pyvye"]
+[ext_resource type="Script" uid="uid://35ekas4eluuw" path="res://scripts/fsm/states/death_parry.gd" id="13_d2smn"]
+[ext_resource type="Script" uid="uid://1nd8odk2sdau" path="res://scripts/fsm/states/fail_parry.gd" id="14_pyvye"]
+[ext_resource type="Script" uid="uid://bvydpu5q3jjam" path="res://scripts/fsm/states/success_parry.gd" id="15_ayv0k"]
+[ext_resource type="Script" uid="uid://ckr1j86rcn3ns" path="res://scripts/fsm/states/victory_parry.gd" id="16_7ekwx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lsxu"]
 atlas = ExtResource("1_6rnxb")
@@ -248,6 +252,18 @@ script = ExtResource("8_d2smn")
 
 [node name="victory" type="Node" parent="state_machine"]
 script = ExtResource("9_pyvye")
+
+[node name="death_parry" type="Node" parent="state_machine"]
+script = ExtResource("13_d2smn")
+
+[node name="fail_parry" type="Node" parent="state_machine"]
+script = ExtResource("14_pyvye")
+
+[node name="success_parry" type="Node" parent="state_machine"]
+script = ExtResource("15_ayv0k")
+
+[node name="victory_parry" type="Node" parent="state_machine"]
+script = ExtResource("16_7ekwx")
 
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="animation_changed" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_changed"]

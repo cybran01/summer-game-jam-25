@@ -7,12 +7,9 @@ func show_message(texture):
 	$MainLabel.set_texture(load("ui/"+texture+".png"))
 	$MainLabel.show()
 
-func show_game_over(winner_idx):
+func show_game_over(winner_name: String):
 	print("GAME OVER")
-	if winner_idx == 1:
-		show_message("player1")
-	else:
-		show_message("player2")
+	show_message(winner_name)
 	$MainLabel.show()
 	$GameOverTimer.start()
 
