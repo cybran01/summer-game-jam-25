@@ -7,6 +7,19 @@ var player2: Player = $Player2
 @onready
 var ui = $UI
 
+var start_pos: Vector2 = Vector2()
+var velocity: Vector2 = Vector2()
+var looserPlayer: Player
+
+func _process(delta: float) -> void:
+	if !looserPlayer:
+		return
+	
+	looserPlayer.move_local_x(velocity.x * delta)
+	looserPlayer.move_local_y(velocity.y * delta)
+	
+	velocity.y += 2000.0 * delta
+	
 func _ready() -> void:
 	player1.attacked.connect(attack_p1)
 	player2.attacked.connect(attack_p2)
@@ -56,6 +69,14 @@ func handle_score(success_player: Player, fail_player: Player, parry: bool):
 		fail_player.state_machine.change_state_by_name("death"+state_suffix)
 		if GameStatus.started:
 			GameStatus.stop_game()
+			if fail_player.name.to_lower() == 'player1':
+				looserPlayer = player1
+				velocity = Vector2(-1000.0, -1000.0)
+			else:
+				looserPlayer = player2
+				velocity = Vector2(1000.0, -1000.0)
+				
+			start_pos = looserPlayer.position
 			ui.show_game_over(success_player.name.to_lower())
 	else:
 		success_player.state_machine.change_state_by_name("success"+state_suffix)
@@ -81,4 +102,6 @@ func _on_ui_start_game() -> void:
 	GameStatus.start_game()
 	
 func _on_ui_reset_game() -> void:
+	looserPlayer.position = start_pos
+	looserPlayer = null
 	reset_game()
