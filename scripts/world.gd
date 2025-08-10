@@ -20,6 +20,9 @@ func _process(delta: float) -> void:
 	
 	velocity.y += 2000.0 * delta
 	
+	if looserPlayer.position.y >= 1500 && !$ToiletSound.playing:
+		$ToiletSound.play()
+	
 func _ready() -> void:
 	player1.attacked.connect(attack_p1)
 	player2.attacked.connect(attack_p2)
@@ -64,7 +67,7 @@ func handle_score(success_player: Player, fail_player: Player, parry: bool):
 	if parry:
 		state_suffix = "_parry"
 	success_player.score += 1
-	if success_player.score >= 3:
+	if success_player.score >= 1	:
 		success_player.state_machine.change_state_by_name("victory"+state_suffix)
 		fail_player.state_machine.change_state_by_name("death"+state_suffix)
 		if GameStatus.started:

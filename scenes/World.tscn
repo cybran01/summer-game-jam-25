@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk24bq40j08cy"]
+[gd_scene load_steps=14 format=3 uid="uid://bk24bq40j08cy"]
 
 [ext_resource type="Script" uid="uid://dku4i66hcthlt" path="res://scripts/world.gd" id="1_7g83o"]
 [ext_resource type="PackedScene" uid="uid://5o0ka2vrc1u" path="res://scenes/Player1.tscn" id="1_32lhk"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://judvvyq7gycq" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
 [ext_resource type="AudioStream" uid="uid://cmqmabfg7xbu1" path="res://soundeffects/hit.wav" id="10_pdh0q"]
 [ext_resource type="AudioStream" uid="uid://w01t6hdlyjic" path="res://soundeffects/sword_hit.wav" id="12_7c4bj"]
+[ext_resource type="AudioStream" uid="uid://x7kkc037vdii" path="res://soundeffects/toilet_long.wav" id="13_nrtoj"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_7g83o")
@@ -54,6 +55,9 @@ max_polyphony = 4
 [node name="ParrySound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_7c4bj")
 volume_db = -2.0
+
+[node name="ToiletSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_nrtoj")
 
 [connection signal="reset_game" from="UI" to="." method="_on_ui_reset_game"]
 [connection signal="start_game" from="UI" to="." method="_on_ui_start_game"]
