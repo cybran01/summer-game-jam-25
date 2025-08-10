@@ -13,7 +13,7 @@ config_version=5
 config/name="Pool Noodle Sim"
 run/main_scene="uid://bk24bq40j08cy"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://m8pa4614q2vg"
 
 [autoload]
 
