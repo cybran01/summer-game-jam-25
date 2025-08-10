@@ -30,6 +30,8 @@ func _on_start_button_pressed() -> void:
 func _on_start_timer_timeout() -> void:
 	show_message("fight")
 	$ReadyTimer.start()
+	$Player1keys.hide()
+	$Player2keys.hide()
 
 func _on_ready_timer_timeout() -> void:
 	$MainLabel.hide()
@@ -49,4 +51,6 @@ func _on_game_over_timer_timeout() -> void:
 	$MainLabel.hide()
 	$StartButton.show()
 	reset_scores()
+	$Player1keys.show()
+	$Player2keys.show()
 	reset_game.emit()
