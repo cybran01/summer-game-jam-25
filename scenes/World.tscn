@@ -1,24 +1,39 @@
-[gd_scene load_steps=14 format=3 uid="uid://bk24bq40j08cy"]
+[gd_scene load_steps=15 format=3 uid="uid://bk24bq40j08cy"]
 
 [ext_resource type="Script" uid="uid://dku4i66hcthlt" path="res://scripts/world.gd" id="1_7g83o"]
 [ext_resource type="PackedScene" uid="uid://5o0ka2vrc1u" path="res://scenes/Player1.tscn" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://bsl7yb7jvsnw" path="res://scenes/Player2.tscn" id="2_7g83o"]
+[ext_resource type="Texture2D" uid="uid://bdb1xdxjxx815" path="res://animations/podest.png" id="3_i4b1j"]
 [ext_resource type="PackedScene" uid="uid://biis8qsrgr7pu" path="res://scenes/UI.tscn" id="4_d1c63"]
-[ext_resource type="Texture2D" uid="uid://p80fiyx36m0r" path="res://animations/bg_01.png" id="4_h1bdy"]
-[ext_resource type="AudioStream" uid="uid://crn46wb0i5yr1" path="res://soundeffects/sword_woosh.wav" id="5_1lgw5"]
-[ext_resource type="AudioStream" uid="uid://4hd7yyqnchdd" path="res://soundeffects/ambient.wav" id="5_7c4bj"]
-[ext_resource type="AudioStream" uid="uid://brcxa2woko12d" path="res://soundeffects/player_hitsound_01.wav" id="6_0uv0p"]
-[ext_resource type="AudioStream" uid="uid://bn72yc3kinsyk" path="res://soundeffects/player_hitsound_02.wav" id="7_b3faq"]
-[ext_resource type="AudioStream" uid="uid://62a7xnbdx463" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
-[ext_resource type="AudioStream" uid="uid://cv2twp78dc4gj" path="res://soundeffects/hit.wav" id="10_pdh0q"]
-[ext_resource type="AudioStream" uid="uid://udttmh3niu83" path="res://soundeffects/sword_hit.wav" id="12_7c4bj"]
-[ext_resource type="AudioStream" uid="uid://ox6dblr7pmmo" path="res://soundeffects/toilet_long.wav" id="13_nrtoj"]
+[ext_resource type="Texture2D" uid="uid://d1k14o4atgg42" path="res://animations/bg_01.png" id="4_h1bdy"]
+[ext_resource type="AudioStream" uid="uid://cfkrdkdvdc8lx" path="res://soundeffects/sword_woosh.wav" id="5_1lgw5"]
+[ext_resource type="AudioStream" uid="uid://cumbmkq0m8xgv" path="res://soundeffects/ambient.wav" id="5_7c4bj"]
+[ext_resource type="AudioStream" uid="uid://ll3va7xdpgqd" path="res://soundeffects/player_hitsound_01.wav" id="6_0uv0p"]
+[ext_resource type="AudioStream" uid="uid://ceuicxpn3mfi" path="res://soundeffects/player_hitsound_02.wav" id="7_b3faq"]
+[ext_resource type="AudioStream" uid="uid://0c37gvqrcit0" path="res://soundeffects/player_hitsound_03.wav" id="8_b3faq"]
+[ext_resource type="AudioStream" uid="uid://ccwl6tomefngj" path="res://soundeffects/hit.wav" id="10_pdh0q"]
+[ext_resource type="AudioStream" uid="uid://dy2jo434o70ke" path="res://soundeffects/sword_hit.wav" id="12_7c4bj"]
+[ext_resource type="AudioStream" uid="uid://dmxxddxp1wc5l" path="res://soundeffects/toilet_long.wav" id="13_nrtoj"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_7g83o")
 
 [node name="BG" type="Sprite2D" parent="."]
 texture = ExtResource("4_h1bdy")
+
+[node name="Player1Podest" type="TextureRect" parent="."]
+offset_left = -609.0
+offset_top = 390.0
+offset_right = -148.0
+offset_bottom = 746.0
+texture = ExtResource("3_i4b1j")
+
+[node name="Player2Podest" type="TextureRect" parent="."]
+offset_left = 146.0
+offset_top = 390.0
+offset_right = 607.0
+offset_bottom = 746.0
+texture = ExtResource("3_i4b1j")
 
 [node name="Player1" parent="." instance=ExtResource("1_32lhk")]
 position = Vector2(-307, 0)
