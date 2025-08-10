@@ -2,5 +2,5 @@ extends State
 
 func enter() -> void:
 	super()
-	player.anim_sprite.play("success_parry")
+	player.anim_sprite.play("victory_parry")
 	print($'../..'.name + " " + self.name)

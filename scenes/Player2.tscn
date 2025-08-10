@@ -1,9 +1,9 @@
-[gd_scene load_steps=58 format=3 uid="uid://bsl7yb7jvsnw"]
+[gd_scene load_steps=67 format=3 uid="uid://bsl7yb7jvsnw"]
 
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_21jxl"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="1_a1ruj"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="2_6rnxb"]
-[ext_resource type="Texture2D" uid="uid://cucjsn2wo8gtw" path="res://animations/anim_Spritesheet_02.png" id="2_pyvye"]
+[ext_resource type="Texture2D" uid="uid://dv2k4ju5piy4o" path="res://animations/anim_Spritesheet_02.png" id="2_pyvye"]
 [ext_resource type="Script" uid="uid://boilyalvtioas" path="res://scripts/player_animsprite.gd" id="3_5r00m"]
 [ext_resource type="Script" uid="uid://cgstr6ytpbfnw" path="res://scripts/fsm/states/death.gd" id="3_21jxl"]
 [ext_resource type="Script" uid="uid://dvqjs37qap8cd" path="res://scripts/fsm/states/fail.gd" id="4_5r00m"]
@@ -55,11 +55,7 @@ region = Rect2(1024, 2048, 1024, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xatjn"]
 atlas = ExtResource("2_pyvye")
-region = Rect2(1024, 0, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3uyny"]
-atlas = ExtResource("2_pyvye")
-region = Rect2(0, 5120, 1024, 1024)
+region = Rect2(1024, 3072, 1024, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fk6d2"]
 atlas = ExtResource("2_pyvye")
@@ -177,6 +173,46 @@ region = Rect2(4096, 0, 1024, 1024)
 atlas = ExtResource("2_pyvye")
 region = Rect2(0, 1024, 1024, 1024)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pqp6"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(3072, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iloa7"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(4096, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om06i"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbcu5"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(0, 4096, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uyny"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(1024, 3072, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rkd7"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(1024, 2048, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtskm"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(3072, 3072, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lqfa"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(4096, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeent"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fen2h"]
+atlas = ExtResource("2_pyvye")
+region = Rect2(0, 4096, 1024, 1024)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_21jxl"]
 animations = [{
 "frames": [{
@@ -219,9 +255,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xatjn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3uyny")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fk6d2")
@@ -355,6 +388,46 @@ animations = [{
 "loop": false,
 "name": &"success_parry",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pqp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iloa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om06i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbcu5")
+}],
+"loop": false,
+"name": &"victory",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uyny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rkd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtskm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lqfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeent")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fen2h")
+}],
+"loop": false,
+"name": &"victory_parry",
+"speed": 5.0
 }]
 
 [node name="Player2" type="Node2D"]
@@ -362,7 +435,7 @@ script = ExtResource("1_21jxl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_21jxl")
-animation = &"attack"
+animation = &"victory"
 flip_h = true
 script = ExtResource("3_5r00m")
 
