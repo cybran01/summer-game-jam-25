@@ -81,6 +81,7 @@ func handle_score(success_player: Player, fail_player: Player, parry: bool):
 				
 			start_pos = looserPlayer.position
 			ui.show_game_over(success_player.name.to_lower())
+			GameStatus.prepare()
 	else:
 		success_player.state_machine.change_state_by_name("success"+state_suffix)
 		fail_player.state_machine.change_state_by_name("fail"+state_suffix)
@@ -107,4 +108,10 @@ func _on_ui_start_game() -> void:
 func _on_ui_reset_game() -> void:
 	looserPlayer.position = start_pos
 	looserPlayer = null
+	GameStatus.stop_game()
 	reset_game()
+
+func _input(event: InputEvent) -> void:
+	if not (GameStatus.started or GameStatus.preparing) and event.is_action_pressed("start_game_ui"):
+		GameStatus.prepare()
+		$UI.start_game_ui()

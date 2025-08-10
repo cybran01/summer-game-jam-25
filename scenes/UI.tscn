@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://biis8qsrgr7pu"]
+[gd_scene load_steps=8 format=3 uid="uid://biis8qsrgr7pu"]
 
-[ext_resource type="FontFile" uid="uid://dqylmji5ar12p" path="res://fonts/Midorima-PersonalUse-Regular.ttf" id="2_5en4g"]
+[ext_resource type="FontFile" uid="uid://dkxgr02pf57k3" path="res://fonts/Midorima-PersonalUse-Regular.ttf" id="2_5en4g"]
 [ext_resource type="Script" uid="uid://c4msocrruk45j" path="res://scripts/ui.gd" id="2_ro3t7"]
-[ext_resource type="Texture2D" uid="uid://cu3tb71sklwkk" path="res://ui/score0.png" id="3_5en4g"]
-[ext_resource type="Texture2D" uid="uid://c78fqosq2umsr" path="res://ui/arrow_keys.png" id="4_75u2n"]
-[ext_resource type="Texture2D" uid="uid://cqeyxw31txyen" path="res://ui/wad_keys.png" id="4_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://b4sxcai53t6gw" path="res://ui/player1_score0.png" id="3_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://2welef2wjtlh" path="res://ui/player2_score0.png" id="4_75u2n"]
+[ext_resource type="Texture2D" uid="uid://bjdu5ywv3mppo" path="res://ui/wad_keys.png" id="4_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://degjeb5p7v5hd" path="res://ui/score0.png" id="5_75u2n"]
+[ext_resource type="Texture2D" uid="uid://b6v4ri68vrxqy" path="res://ui/arrow_keys.png" id="6_xpksx"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("2_ro3t7")
@@ -55,19 +57,38 @@ theme_override_font_sizes/font_size = 60
 text = "PLAYER 2"
 
 [node name="Player1Score" type="TextureRect" parent="."]
-offset_right = 256.0
-offset_bottom = 88.0
-texture = ExtResource("3_5en4g")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_right = -117.878
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("3_ua6yw")
+expand_mode = 3
 
 [node name="Player2Score" type="TextureRect" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -256.0
-offset_bottom = 88.0
-grow_horizontal = 0
-texture = ExtResource("3_5en4g")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 112.0
+offset_right = 394.122
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("4_75u2n")
+expand_mode = 3
 flip_h = true
+
+[node name="WinnerScore" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_right = 84.0
+offset_bottom = 168.0
+grow_horizontal = 2
+texture = ExtResource("5_75u2n")
+expand_mode = 3
 
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = 8
@@ -109,7 +130,7 @@ offset_right = -15.0
 offset_bottom = 176.0
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("4_75u2n")
+texture = ExtResource("6_xpksx")
 expand_mode = 3
 stretch_mode = 4
 

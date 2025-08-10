@@ -9,11 +9,15 @@ func show_message(texture):
 	
 func show_player_score(player: int, score: int):
 	var score_label: TextureRect
+	
 	if player == 1:
 		score_label = $Player1Score
 	else:
 		score_label = $Player2Score
-	score_label.set_texture(load("ui/score"+ str(score)+".png"))
+	if score == 3:
+		score_label = $WinnerScore
+		
+	score_label.set_texture(load("ui/player"+ str(player)+"_score"+ str(score)+".png"))
 	score_label.show()
 
 func show_game_over(winner_name: String):
@@ -23,6 +27,9 @@ func show_game_over(winner_name: String):
 	$GameOverTimer.start()
 
 func _on_start_button_pressed() -> void:
+	start_game_ui()
+	
+func start_game_ui():
 	$StartButton.hide()
 	show_message("ready")
 	$StartTimer.start()
@@ -44,6 +51,7 @@ func update_player2_score(score):
 	show_player_score(2, score)
 
 func reset_scores():
+	$WinnerScore.set_texture(load("ui/score0.png"))
 	update_player1_score(0)
 	update_player2_score(0)
 
