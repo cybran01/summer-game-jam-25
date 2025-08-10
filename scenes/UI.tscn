@@ -65,6 +65,7 @@ offset_left = -256.0
 offset_bottom = 88.0
 grow_horizontal = 0
 texture = ExtResource("3_5en4g")
+flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = 8
