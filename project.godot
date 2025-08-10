@@ -13,6 +13,8 @@ config_version=5
 config/name="Pool Noodle Sim"
 run/main_scene="uid://bk24bq40j08cy"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/fullsize=false
+boot_splash/image="uid://bueml1q6rt4bn"
 config/icon="uid://b6p5y7lr8t6bl"
 
 [autoload]
