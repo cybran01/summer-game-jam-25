@@ -25,5 +25,5 @@ func _on_animation_changed() -> void:
 			play_hit.emit()
 		'parry':
 			play_sword_woosh.emit()
-		'success_parry':
+		'success_parry', 'victory_parry':
 			play_sword_hit.emit()
