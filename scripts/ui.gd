@@ -6,6 +6,15 @@ signal reset_game
 func show_message(texture):
 	$MainLabel.set_texture(load("ui/"+texture+".png"))
 	$MainLabel.show()
+	
+func show_player_score(player: int, score: int):
+	var score_label: TextureRect
+	if player == 1:
+		score_label = $Player1Score
+	else:
+		score_label = $Player2Score
+	score_label.set_texture(load("ui/score"+ str(score)+".png"))
+	score_label.show()
 
 func show_game_over(winner_name: String):
 	print("GAME OVER")
@@ -27,14 +36,14 @@ func _on_ready_timer_timeout() -> void:
 	start_game.emit()
 	
 func update_player1_score(score):
-	$Player1Score.text = str(score)
+	show_player_score(1, score)
 	
 func update_player2_score(score):
-	$Player2Score.text = str(score)
+	show_player_score(2, score)
 
 func reset_scores():
-	$Player1Score.text = "0"
-	$Player2Score.text = "0"
+	update_player1_score(0)
+	update_player2_score(0)
 
 func _on_game_over_timer_timeout() -> void:
 	$MainLabel.hide()
