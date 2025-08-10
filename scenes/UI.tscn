@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://biis8qsrgr7pu"]
 
-[ext_resource type="FontFile" uid="uid://jupim6v65sye" path="res://fonts/Midorima-PersonalUse-Regular.ttf" id="2_5en4g"]
+[ext_resource type="FontFile" uid="uid://dpoqg0dtm2pan" path="res://fonts/Midorima-PersonalUse-Regular.ttf" id="2_5en4g"]
 [ext_resource type="Script" uid="uid://c4msocrruk45j" path="res://scripts/ui.gd" id="2_ro3t7"]
-[ext_resource type="Texture2D" uid="uid://dorqrsxawshfj" path="res://ui/nametag_01.png" id="2_ukj8e"]
-[ext_resource type="Texture2D" uid="uid://b4d3brgnj81ac" path="res://ui/player1_score0.png" id="3_ua6yw"]
-[ext_resource type="Texture2D" uid="uid://digtautep80v3" path="res://ui/nametag_02.png" id="3_w7enk"]
-[ext_resource type="Texture2D" uid="uid://yixcx10u17he" path="res://ui/player2_score0.png" id="4_75u2n"]
-[ext_resource type="Texture2D" uid="uid://xsy00vhgsnyf" path="res://ui/wad_keys.png" id="4_ua6yw"]
-[ext_resource type="Texture2D" uid="uid://da77lb3of77rl" path="res://ui/score0.png" id="5_75u2n"]
-[ext_resource type="Texture2D" uid="uid://bciwvevxh82q2" path="res://ui/arrow_keys.png" id="6_xpksx"]
+[ext_resource type="Texture2D" uid="uid://3tn32dss366o" path="res://ui/nametag_01.png" id="2_ukj8e"]
+[ext_resource type="Texture2D" uid="uid://d1o45ovm18iuw" path="res://ui/player1_score0.png" id="3_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://cwfoux2e20yk2" path="res://ui/nametag_02.png" id="3_w7enk"]
+[ext_resource type="Texture2D" uid="uid://dy3hju10j2tf4" path="res://ui/player2_score0.png" id="4_75u2n"]
+[ext_resource type="Texture2D" uid="uid://7tn7s7m7dho0" path="res://ui/wad_keys.png" id="4_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://bj3ji6t1e0ht" path="res://ui/coin_n.png" id="6_ukj8e"]
+[ext_resource type="Texture2D" uid="uid://bncc0lud3mqia" path="res://ui/arrow_keys.png" id="6_xpksx"]
 
 [sub_resource type="Theme" id="Theme_ukj8e"]
 
@@ -80,7 +80,7 @@ offset_top = 16.0
 offset_right = 80.0
 offset_bottom = 184.0
 grow_horizontal = 2
-texture = ExtResource("5_75u2n")
+texture = ExtResource("6_ukj8e")
 expand_mode = 3
 
 [node name="StartButton" type="Button" parent="."]
