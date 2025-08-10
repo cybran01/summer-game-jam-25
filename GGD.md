@@ -12,6 +12,7 @@ von der Plattform.
 ### Controls:
 
 **P1**
+---
 | Key      | Aktion  |
 | -------- | ------- |
 | D        | Attack  |
@@ -20,6 +21,7 @@ von der Plattform.
 
 
 **P2**
+---
 | Key      | Aktion  |
 | -------- | ------- |
 | ←        | Attack  |
