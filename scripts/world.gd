@@ -13,8 +13,14 @@ func _ready() -> void:
 	
 	player1.anim_sprite.play_sword_woosh.connect(play_swoosh)
 	player1.anim_sprite.play_hit.connect(play_hit)
+	player1.anim_sprite.play_sword_hit.connect(play_sword_hit)
+	
 	player2.anim_sprite.play_sword_woosh.connect(play_swoosh)
 	player2.anim_sprite.play_hit.connect(play_hit)
+	player2.anim_sprite.play_sword_hit.connect(play_sword_hit)
+
+func play_sword_hit():
+	$ParrySound.play()
 
 func play_swoosh():
 	$SwordSound.play()
@@ -24,9 +30,9 @@ func play_hit():
 		
 		print('playing sound ' + str(number))
 		
-		await get_tree().create_timer(0.2).timeout
-			
 		$BonkSound.play()
+		
+		await get_tree().create_timer(0.1).timeout
 			
 		match number:
 			0:

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dhhihsrul12yx" path="res://scripts/player.gd" id="1_21jxl"]
 [ext_resource type="Script" uid="uid://dirwdbwpq007q" path="res://scripts/fsm/state_machine.gd" id="1_a1ruj"]
 [ext_resource type="Script" uid="uid://vnyrwl7dhtdk" path="res://scripts/fsm/states/attack.gd" id="2_6rnxb"]
-[ext_resource type="Texture2D" uid="uid://c6deyne65wkch" path="res://animations/anim_Spritesheet_02.png" id="2_pyvye"]
+[ext_resource type="Texture2D" uid="uid://c3ta3viy32jxp" path="res://animations/anim_Spritesheet_02.png" id="2_pyvye"]
 [ext_resource type="Script" uid="uid://boilyalvtioas" path="res://scripts/player_animsprite.gd" id="3_5r00m"]
 [ext_resource type="Script" uid="uid://cgstr6ytpbfnw" path="res://scripts/fsm/states/death.gd" id="3_21jxl"]
 [ext_resource type="Script" uid="uid://dvqjs37qap8cd" path="res://scripts/fsm/states/fail.gd" id="4_5r00m"]
